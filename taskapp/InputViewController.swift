@@ -86,10 +86,11 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     // UITextField Delegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if categoryTextView.text == "" {
+        if categoryTextView.text == "" && !categories.isEmpty {
             categoryTextView.text = categories[0]
         }
     }
+
 
     // タスクのローカル通知を登録する --- ここから ---
     func setNotification(task: Task) {
